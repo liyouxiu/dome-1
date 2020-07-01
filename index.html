@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first dome</title>
+  <style>
+    body {
+      background-color: #eee;
+    }
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    @keyframes x {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    #wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #ro {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+
+      position: relative;
+      overflow: hidden;
+      animation: x 10s infinite linear;
+      box-shadow: 0px 0px 5px 3px rgba(0, 0, 0 , 0.50);
+    }
+    @media (max-width: 500px) {
+      #ro {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    #roc1 {
+      width: 50%;
+      height: 100%;
+      background-color: black;
+
+      position: absolute;
+      left: 0;
+    }
+    #roc2 {
+      width: 50%;
+      height: 100%;
+      background-color: white;
+
+      position: absolute;
+      right: 0;
+    }
+    #roc3 {
+      width: 50%;
+      height: 50%;
+      background-color: black;
+      border-radius: 50%;
+
+      position: absolute;
+      left: 25%;
+    }
+    #roc3>div {
+      width: 25%;
+      height: 25%;
+      background-color: white;
+      border-radius: 50%;
+      
+      position: absolute;
+      left: 37.5%;
+      top: 37.5%;
+    }
+    #roc4 {
+      width: 50%;
+      height: 50%;
+      background-color: white;
+      border-radius: 50%;
+
+      position: absolute;
+      left: 25%;
+      bottom: 0;
+    }
+    #roc4>div {
+      width: 25%;
+      height: 25%;
+      background-color: black;
+      border-radius: 50%;
+
+      position: absolute;
+      left: 37.5%;
+      bottom: 37.5%;
+    }
+    #disc {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="ro">
+      <div id="roc1"></div>
+      <div id="roc2"></div>
+      <div id="roc3">
+        <div></div>
+      </div>
+      <div id="roc4">
+        <div></div>
+      </div>
+    </div>
+    <div id="disc">道可道，非常道</div>
+  </div>
+
+</body>
+</html>
